@@ -3,3 +3,5 @@ pyaudio
 scipy
 pyaudio
 pyqt5
+pyqtgraph
+websockets
