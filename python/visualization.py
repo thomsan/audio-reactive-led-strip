@@ -260,9 +260,9 @@ def microphone_update(audio_samples):
             x = np.linspace(config.MIN_FREQUENCY, config.MAX_FREQUENCY, len(mel))
             mel_curve.setData(x=x, y=fft_plot_filter.update(mel))
             # Plot the color channels
-            r_curve.setData(y=led.pixels[0])
-            g_curve.setData(y=led.pixels[1])
-            b_curve.setData(y=led.pixels[2])
+            #r_curve.setData(y=led.pixels[0])
+            #g_curve.setData(y=led.pixels[1])
+            #b_curve.setData(y=led.pixels[2])
     if config.USE_GUI:
         app.processEvents()
     
@@ -305,26 +305,26 @@ if config.USE_GUI:
     fft_plot.addItem(mel_curve)
     # Visualization plot
     layout.nextRow()
-    led_plot = layout.addPlot(title='Visualization Output', colspan=4)
-    led_plot.setRange(yRange=[-5, 260])
-    led_plot.disableAutoRange(axis=pg.ViewBox.YAxis)
+    #led_plot = layout.addPlot(title='Visualization Output', colspan=4)
+    #led_plot.setRange(yRange=[-5, 260])
+    #led_plot.disableAutoRange(axis=pg.ViewBox.YAxis)
     # Pen for each of the color channel curves
-    r_pen = pg.mkPen((255, 30, 30, 200), width=4)
-    g_pen = pg.mkPen((30, 255, 30, 200), width=4)
-    b_pen = pg.mkPen((30, 30, 255, 200), width=4)
+    #r_pen = pg.mkPen((255, 30, 30, 200), width=4)
+    #g_pen = pg.mkPen((30, 255, 30, 200), width=4)
+    #b_pen = pg.mkPen((30, 30, 255, 200), width=4)
     # Color channel curves
-    r_curve = pg.PlotCurveItem(pen=r_pen)
-    g_curve = pg.PlotCurveItem(pen=g_pen)
-    b_curve = pg.PlotCurveItem(pen=b_pen)
+    #r_curve = pg.PlotCurveItem(pen=r_pen)
+    #g_curve = pg.PlotCurveItem(pen=g_pen)
+    #b_curve = pg.PlotCurveItem(pen=b_pen)
     # Define x data
-    x_data = np.array(range(1, config.N_PIXELS + 1))
-    r_curve.setData(x=x_data, y=x_data*0)
-    g_curve.setData(x=x_data, y=x_data*0)
-    b_curve.setData(x=x_data, y=x_data*0)
+    #x_data = np.array(range(1, config.N_PIXELS + 1))
+    #r_curve.setData(x=x_data, y=x_data*0)
+    #g_curve.setData(x=x_data, y=x_data*0)
+    #b_curve.setData(x=x_data, y=x_data*0)
     # Add curves to plot
-    led_plot.addItem(r_curve)
-    led_plot.addItem(g_curve)
-    led_plot.addItem(b_curve)
+    #led_plot.addItem(r_curve)
+    #led_plot.addItem(g_curve)
+    #led_plot.addItem(b_curve)
     # Frequency range label
     freq_label = pg.LabelItem('')
     # Frequency slider

@@ -12,6 +12,7 @@ import dsp
 
 logging.basicConfig()
 
+PORT = 6789
 STATE = {
     "color": {
         "r": 255,
@@ -98,7 +99,7 @@ async def handler(websocket, path):
 def start_server_async():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
-    start_server = websockets.serve(handler, "localhost", 6789)
+    start_server = websockets.serve(handler, "0.0.0.0", PORT)
     
     asyncio.get_event_loop().run_until_complete(start_server)
     asyncio.get_event_loop().run_forever()

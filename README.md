@@ -99,8 +99,9 @@ Running the visualization can be done using the command below.
 ## Arduino dependencies
 ESP8266 firmare is uploaded using the Arduino IDE. See [this tutorial](https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon) to setup the Arduino IDE for ESP8266.
 
-### Install NeoPixelBus library
-[Download Here](https://github.com/Makuna/NeoPixelBus) or using library manager, search for "NeoPixelBus".
+### Arduino libraries
+* NeoPixelBus: [Download Here](https://github.com/Makuna/NeoPixelBus) or using library manager, search for "NeoPixelBus".
+* ArduinoJson: Using library manager, search for "ArduinoJson"
 
 ## Hardware Connections
 ### ESP8266
